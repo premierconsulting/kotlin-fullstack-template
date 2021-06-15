@@ -1,6 +1,7 @@
 plugins {
-    id 'org.jetbrains.kotlin.multiplatform' version '1.4.30'
-    id 'dev.fritz2.fritz2-gradle' version '0.9'
+    id 'org.jetbrains.kotlin.multiplatform' version '1.5.10'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.5.10'
+    id 'dev.fritz2.fritz2-gradle' version '0.11'
 }
 
 group 'net.bytebros'
@@ -29,9 +30,9 @@ kotlin {
             dependencies {
                 implementation kotlin('stdlib-common')
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version")
-                implementation("dev.fritz2:core:0.9")
+                implementation("dev.fritz2:core:0.11")
                 // see https://components.fritz2.dev/
-                // implementation("dev.fritz2:components:0.9")
+                 implementation("dev.fritz2:components:0.11")
             }
         }
         commonTest {
